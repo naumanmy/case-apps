@@ -24,7 +24,7 @@ Namespace Entry
       Try
 
         ' Version
-        If Not commandData.Application.Application.VersionName.Contains("2018") Then
+        If Not commandData.Application.Application.VersionName.Contains("2019") Then
 
           ' Failure
           Using td As New TaskDialog("Cannot Continue")
