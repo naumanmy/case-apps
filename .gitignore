@@ -526,3 +526,5 @@ deploy/2022/Newtonsoft.Json.xml
 deploy/2022/RestSharp.dll
 deploy/2022/RestSharp.xml
 deploy/2022/TemplateRevitVB.xml
+deploy/2021/Case.AppsRibbon.dll
+deploy/2020/Case.SharedParameters.dll

@@ -876,10 +876,10 @@ Namespace Entry
 
                 ' Param Loader
 
-                m_pbd = GetPushButtonData("Case.Subs.SharedParameters",
+                m_pbd = GetPushButtonData("Case.SharedParameters",
                                   "Param" & vbCr & "Loader",
-                                  Path.Combine(_path, "Case.Subs.SharedParameters.dll"),
-                                  "Case.Subs.SharedParameters.Entry.CmdMain",
+                                  Path.Combine(_path, "Case.SharedParameters.dll"),
+                                  "Case.SharedParameters.Entry.CmdMain",
                                   "Case.AppsRibbon.SharedParam_16.png",
                                   "Case.AppsRibbon.SharedParam_32.png",
                                   "An improved tool for loading Shared Parameters from a file",
