@@ -7,11 +7,11 @@ using System.Windows;
 // General Information about an assembly is controlled through the following 
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
-[assembly: AssemblyTitle("BCF for Navisworks 2020")]
-[assembly: AssemblyDescription("BCF for Navisworks 2020")]
+[assembly: AssemblyTitle("BCF for Navisworks 2021")]
+[assembly: AssemblyDescription("BCF for Navisworks 2021")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("CASE Design, Inc.")]
-[assembly: AssemblyProduct("BCF for Navisworks 2020")]
+[assembly: AssemblyProduct("BCF for Navisworks 2021")]
 [assembly: AssemblyCopyright("")]
 [assembly: AssemblyTrademark("CASE Design, Inc.")]
 [assembly: AssemblyCulture("")]

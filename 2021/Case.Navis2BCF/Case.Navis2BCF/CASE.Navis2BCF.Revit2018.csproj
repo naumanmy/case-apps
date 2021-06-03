@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
   <PropertyGroup>
@@ -45,18 +45,18 @@
   <ItemGroup>
     <Reference Include="Autodesk.Navisworks.Api, Version=12.0.1109.12, Culture=neutral, PublicKeyToken=d85e58fa5af9b484, processorArchitecture=AMD64">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>C:\Program Files\Autodesk\Navisworks Manage 2020\Autodesk.Navisworks.Api.dll</HintPath>
+      <HintPath>C:\Program Files\Autodesk\Navisworks Manage 2021\Autodesk.Navisworks.Api.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="Autodesk.Navisworks.ComApi, Version=12.0.1109.12, Culture=neutral, PublicKeyToken=d85e58fa5af9b484, processorArchitecture=AMD64">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>C:\Program Files\Autodesk\Navisworks Manage 2020\Autodesk.Navisworks.ComApi.dll</HintPath>
+      <HintPath>C:\Program Files\Autodesk\Navisworks Manage 2021\Autodesk.Navisworks.ComApi.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="Autodesk.Navisworks.Interop.ComApi, Version=10.0.840.82, Culture=neutral, PublicKeyToken=d85e58fa5af9b484, processorArchitecture=AMD64">
       <SpecificVersion>False</SpecificVersion>
       <EmbedInteropTypes>False</EmbedInteropTypes>
-      <HintPath>C:\Program Files\Autodesk\Navisworks Manage 2020\Autodesk.Navisworks.Interop.ComApi.dll</HintPath>
+      <HintPath>C:\Program Files\Autodesk\Navisworks Manage 2021\Autodesk.Navisworks.Interop.ComApi.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="Ionic.Zip, Version=1.9.8.0, Culture=neutral, PublicKeyToken=6583c7c814667745, processorArchitecture=MSIL">
@@ -142,9 +142,9 @@
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <PropertyGroup>
-    <PostBuildEvent>xcopy /Y "$(TargetDir)*" "%25APPDATA%25\Autodesk Navisworks Manage 2020\Plugins\$(TargetName)\"
-mkdir "%25APPDATA%25\Autodesk Navisworks Manage 2020\Plugins\$(TargetName)\en-US\"
-copy /Y "$(TargetDir)CustomRibbon.xaml" "%25APPDATA%25\Autodesk Navisworks Manage 2020\Plugins\$(TargetName)\en-US\"
+    <PostBuildEvent>xcopy /Y "$(TargetDir)*" "%25APPDATA%25\Autodesk Navisworks Manage 2021\Plugins\$(TargetName)\"
+mkdir "%25APPDATA%25\Autodesk Navisworks Manage 2021\Plugins\$(TargetName)\en-US\"
+copy /Y "$(TargetDir)CustomRibbon.xaml" "%25APPDATA%25\Autodesk Navisworks Manage 2021\Plugins\$(TargetName)\en-US\"
 
 </PostBuildEvent>
   </PropertyGroup>

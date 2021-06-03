@@ -108,6 +108,6 @@
     <Delete Files="$(AppData)\Autodesk\REVIT\Addins\2013\Case.ElementNameToParameter.addin" />
   </Target>
   <PropertyGroup>
-    <PostBuildEvent>copy "$(TargetDir)\*" "$(SolutionDir)\deploy\2020\" /Y</PostBuildEvent>
+    <PostBuildEvent>copy "$(TargetDir)*" "$(SolutionDir)\deploy\2021\" /Y</PostBuildEvent>
   </PropertyGroup>
 </Project>

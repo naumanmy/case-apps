@@ -235,6 +235,6 @@
     <Delete Files="$(AppData)\Autodesk\REVIT\Addins\2017\Case.Subs.Exceler8.addin" />
   </Target>
   <PropertyGroup>
-    <PostBuildEvent>copy "$(TargetDir)\*" "$(SolutionDir)\deploy\2020\" /Y</PostBuildEvent>
+    <PostBuildEvent>copy "$(TargetDir)*" "$(SolutionDir)\deploy\2021\" /Y</PostBuildEvent>
   </PropertyGroup>
 </Project>

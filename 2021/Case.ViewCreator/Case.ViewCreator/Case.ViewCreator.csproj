@@ -144,6 +144,6 @@
     <Delete Files="$(AppData)\Autodesk\REVIT\Addins\2011\Case.ViewCreator.addin" />
   </Target>
   <PropertyGroup>
-    <PostBuildEvent>copy "$(TargetDir)\*" "$(SolutionDir)\deploy\2020\" /Y</PostBuildEvent>
+    <PostBuildEvent>copy "$(TargetDir)*" "$(SolutionDir)\deploy\2021\" /Y</PostBuildEvent>
   </PropertyGroup>
 </Project>

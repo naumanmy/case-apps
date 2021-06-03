@@ -47,10 +47,8 @@
     <AssemblyName>Case.Subs.ViewSync</AssemblyName>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="Newtonsoft.Json, Version=6.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
-      <HintPath>..\..\..\packages\Newtonsoft.Json.6.0.8\lib\net45\Newtonsoft.Json.dll</HintPath>
-      <SpecificVersion>False</SpecificVersion>
-      <Private>True</Private>
+    <Reference Include="Newtonsoft.Json, Version=13.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\..\..\packages\Newtonsoft.Json.13.0.1\lib\net45\Newtonsoft.Json.dll</HintPath>
     </Reference>
     <Reference Include="PresentationCore" />
     <Reference Include="RevitAPI">
@@ -209,6 +207,6 @@
     <Delete Files="$(AppData)\Autodesk\REVIT\Addins\2017\Case.Subs.ViewSync.addin" />
   </Target>
   <PropertyGroup>
-    <PostBuildEvent>copy "$(TargetDir)\*" "$(SolutionDir)\deploy\2020\" /Y</PostBuildEvent>
+    <PostBuildEvent>copy "$(TargetDir)*" "$(SolutionDir)\deploy\2021\" /Y</PostBuildEvent>
   </PropertyGroup>
 </Project>

@@ -34,10 +34,10 @@ namespace CASE.Navis2BCF
     {
 
       // Version
-      if (!Autodesk.Navisworks.Api.Application.Version.RuntimeProductName.Contains("2020"))
+      if (!Autodesk.Navisworks.Api.Application.Version.RuntimeProductName.Contains("2021"))
       {
         MessageBox.Show("Incompatible Navisworks Version" +
-                        "\nThis Add-In was built for Navisworks 2020, please contact info@case-inc for assistance...",
+                        "\nThis Add-In was built for Navisworks 2021, please contact info@case-inc for assistance...",
                         "Cannot Continue!",
                         MessageBoxButtons.OK,
                         MessageBoxIcon.Error);
