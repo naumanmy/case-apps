@@ -6,6 +6,6 @@
     <FullClassName>Case.AppsRibbon.Entry.AppMain</FullClassName>
     <ClientId>0000000b-0000-0007-000F-00000F30D000</ClientId>
     <VendorId>CSDR</VendorId>
-    <VendorDescription>CASE Design Inc., http://www.case-inc.com </VendorDescription>
+    <VendorDescription>CASE Design Inc., https://github.com/johnpierson/case-apps </VendorDescription>
   </AddIn>
 </RevitAddIns>
