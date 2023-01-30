@@ -1,0 +1,1517 @@
+﻿<?xml version="1.0"?>
+<doc>
+<assembly>
+<name>
+Case.Subs.Exceler8
+</name>
+</assembly>
+<members>
+<member name="T:Case.Subs.Exceler8.My.Resources.Resources">
+<summary>
+  A strongly-typed resource class, for looking up localized strings, etc.
+</summary>
+</member>
+<member name="P:Case.Subs.Exceler8.My.Resources.Resources.ResourceManager">
+<summary>
+  Returns the cached ResourceManager instance used by this class.
+</summary>
+</member>
+<member name="P:Case.Subs.Exceler8.My.Resources.Resources.Culture">
+<summary>
+  Overrides the current thread's CurrentUICulture property for all
+  resource lookups using this strongly typed resource class.
+</summary>
+</member>
+<member name="P:Case.Subs.Exceler8.My.Resources.Resources._1365724626_ruler">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:Case.Subs.Exceler8.My.Resources.Resources.case_logo_type_32x122">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:Case.Subs.Exceler8.My.Resources.Resources.icon_excel">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:Case.Subs.Exceler8.My.Resources.Resources.thumbs_up_ammo_guns_0">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="F:Case.Subs.Exceler8.Data.clsRvtScheduleData._cells">
+ <summary>
+ A collection of cells which have already been output.  This is needed to deal with
+ cell merging - each cell should be written only once even as all the cells are iterated in
+ order.
+ </summary>
+</member>
+<member name="M:Case.Subs.Exceler8.Data.clsRvtScheduleData.#ctor(Autodesk.Revit.DB.ViewSchedule)">
+ <summary>
+ Constructor
+ </summary>
+ <param name="vs">The schedule to be exported.</param>
+</member>
+<member name="M:Case.Subs.Exceler8.Data.clsRvtScheduleData.ExportToHtml">
+ <summary>
+ Exports the schedule to formatted HTML.
+ </summary>
+</member>
+<member name="M:Case.Subs.Exceler8.Data.clsRvtScheduleData.WriteHeader">
+ <summary>
+ Writes the header section of the table to the HTML file.
+ </summary>
+</member>
+<member name="M:Case.Subs.Exceler8.Data.clsRvtScheduleData.WriteBody">
+ <summary>
+ Writes the body section of the table to the HTML file.
+ </summary>
+</member>
+<member name="M:Case.Subs.Exceler8.Data.clsRvtScheduleData.GetColorHtmlString(Autodesk.Revit.DB.Color)">
+ <summary>
+ Gets the Color value formatted for HTML (#XXXXXX) output.
+ </summary>
+ <param name="color">he color.</param>
+ <returns>The color string.</returns>
+</member>
+<member name="P:Case.Subs.Exceler8.Data.clsRvtScheduleData.Black">
+ <summary>
+ A predefined color value used for comparison.
+ </summary>
+</member>
+<member name="P:Case.Subs.Exceler8.Data.clsRvtScheduleData.White">
+ <summary>
+ A predefined color value used for comparison.
+ </summary>
+</member>
+<member name="M:Case.Subs.Exceler8.Data.clsRvtScheduleData.ColorsEqual(Autodesk.Revit.DB.Color,Autodesk.Revit.DB.Color)">
+ <summary>
+ Compares two colors.
+ </summary>
+ <param name="color1">The first color.</param>
+ <param name="color2">The second color.</param>
+ <returns>True if the colors are equal, false otherwise.</returns>
+</member>
+<member name="M:Case.Subs.Exceler8.Data.clsRvtScheduleData.GetAlignString(Autodesk.Revit.DB.HorizontalAlignmentStyle)">
+ <summary>
+ Gets the HTML string representing this horizontal alignment.
+ </summary>
+ <param name="style">The horizontal alignment.</param>
+ <returns>The related string.</returns>
+</member>
+<member name="M:Case.Subs.Exceler8.Data.clsRvtScheduleData.WriteSectionRowTemp(System.Int32,Autodesk.Revit.DB.TableSectionData,System.Int32,System.Int32)">
+ <summary>
+ Writes a row of a table section.
+ </summary>
+ <param name="secType">The section type.</param>
+ <param name="data">The table section data.</param>
+ <param name="numberOfRows">The row number.</param>
+ <param name="numberOfColumns">The number of columns to write.</param>
+</member>
+<member name="M:Case.Subs.Exceler8.Data.clsRvtScheduleData.WriteHeaderSectionRowHtml(System.Int32,System.Int32)">
+ <summary>
+ Writes a row of the header.
+ </summary>
+ <param name="iRow">The row number.</param>
+ <param name="numberOfColumns">The number of columns to write.</param>
+</member>
+<member name="M:Case.Subs.Exceler8.Data.clsRvtScheduleData.WriteBodySectionRowHtml(System.Int32,System.Int32)">
+ <summary>
+ Writes a row of the body.
+ </summary>
+ <param name="iRow">The row number.</param>
+ <param name="numberOfColumns">The number of columns to write.</param>
+</member>
+<member name="M:Case.Subs.Exceler8.Data.clsRvtScheduleData.WriteSectionRowHtml(Autodesk.Revit.DB.SectionType,Autodesk.Revit.DB.TableSectionData,System.Int32,System.Int32)">
+ <summary>
+ Writes a row of a table section.
+ </summary>
+ <param name="iRow">The row number.</param>
+ <param name="numberOfColumns">The number of columns to write.</param>
+ <param name="secType">The section type.</param>
+ <param name="data">The table section data.</param>
+</member>
+<member name="M:Case.Subs.Exceler8.Data.clsRvtScheduleData.ReplaceIllegalCharacters(System.String)">
+ <summary>
+ An utility method to replace illegal characters of the Schedule name when creating the HTML file name.
+ </summary>
+ <param name="stringWithIllegalChar">The Schedule name.</param>
+ <returns>The updated string without illegal characters.</returns>
+</member>
+<member name="M:Case.Subs.Exceler8.Data.clsRvtScheduleData.GetData">
+ <summary>
+ Turn the schedule into a table
+ </summary>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="P:Case.Subs.Exceler8.Data.clsDirection.NameAndGroup">
+ <summary>
+ Field Name
+ </summary>
+ <value></value>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="P:Case.Subs.Exceler8.Data.clsDirection.Direction">
+ <summary>
+ Data Direction Intention
+ </summary>
+ <value></value>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="M:Case.Subs.Exceler8.Data.clsDirection.#ctor(System.String,Case.Subs.Exceler8.Data.EnumSyncDir)">
+ <summary>
+ Sync Direction
+ </summary>
+ <param name="n">Parameter Name | Parameter Group Name</param>
+ <param name="d">Direction of Sync Intent</param>
+ <remarks></remarks>
+</member>
+<member name="P:Case.Subs.Exceler8.Data.clsRvtCategory.IsChecked">
+ <summary>
+ Inclusion 
+ </summary>
+ <value></value>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="P:Case.Subs.Exceler8.Data.clsRvtCategory.CategoryName">
+ <summary>
+ Category Name
+ </summary>
+ <value></value>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="M:Case.Subs.Exceler8.Data.clsRvtCategory.#ctor(Autodesk.Revit.DB.Category)">
+ <summary>
+ Category Helper
+ </summary>
+ <param name="c"></param>
+ <remarks></remarks>
+</member>
+<member name="M:Case.Subs.Exceler8.Data.clsRvtCategory.GetCategory">
+ <summary>
+ Get the Category
+ </summary>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="P:Case.Subs.Exceler8.Data.clsRvtCategoryData.TableType">
+ <summary>
+ Table Scope
+ </summary>
+ <value></value>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="P:Case.Subs.Exceler8.Data.clsRvtCategoryData.CategoryName">
+ <summary>
+ Category Name
+ </summary>
+ <value></value>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="P:Case.Subs.Exceler8.Data.clsRvtCategoryData.AllParams">
+ <summary>
+ All Parameters
+  - Element(e) - Types(t) - Instance(i)
+  - Parameter Group Name as Key
+  - Parameters with Name as Key
+ </summary>
+ <value></value>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="P:Case.Subs.Exceler8.Data.clsRvtCategoryData.TypeElem">
+ <summary>
+ Type Elements
+ </summary>
+ <value></value>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="P:Case.Subs.Exceler8.Data.clsRvtCategoryData.InstElem">
+ <summary>
+ Instance Elements
+ </summary>
+ <value></value>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="M:Case.Subs.Exceler8.Data.clsRvtCategoryData.#ctor(Autodesk.Revit.DB.Category,Autodesk.Revit.DB.Document,System.Boolean,System.Boolean,System.Boolean,System.Boolean,Case.Subs.Exceler8.Data.EnumRevitElementTableType,System.Collections.Generic.SortedDictionary{System.Int32,Case.Subs.Exceler8.Data.clsRvtWorksets})">
+ <summary>
+ Category Data Helper
+ </summary>
+ <param name="c">Revit Category</param>
+ <param name="d">Revit Document</param>
+ <param name="getInstances"></param>
+ <param name="getTypes"></param>
+ <param name="isNumericValues"></param>
+ <param name="tableKind">Types, Instances, or both</param>
+ <param name="uws">User Worksets</param>
+ <remarks></remarks>
+</member>
+<member name="M:Case.Subs.Exceler8.Data.clsRvtCategoryData.Setup">
+ <summary>
+ Class Configuration
+ </summary>
+ <remarks></remarks>
+</member>
+<member name="M:Case.Subs.Exceler8.Data.clsRvtCategoryData.GetPropertyNames">
+ <summary>
+ Get the Parameter Data - Speed up Processing of Instances
+ </summary>
+ <remarks></remarks>
+</member>
+<member name="M:Case.Subs.Exceler8.Data.clsRvtCategoryData.GetPropertyValue(System.String,System.Boolean,System.Boolean,Autodesk.Revit.DB.Element)">
+ <summary>
+ Get the Value of the Parameter
+ </summary>
+ <param name="propName">Property Name</param>
+ <param name="isNumeric"></param>
+ <param name="isElementId"></param>
+ <param name="e"></param>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="M:Case.Subs.Exceler8.Data.clsRvtCategoryData.GetAllPropertyValues(System.Windows.Forms.ProgressBar)">
+ <summary>
+ Convert to Data Table
+ </summary>
+ <param name="p">Progress bar</param>
+ <returns>Array containing all element data matching requested element scope</returns>
+ <remarks></remarks>
+</member>
+<member name="P:Case.Subs.Exceler8.Data.clsIoConfig.ConfigName">
+ <summary>
+ Filename without extension or path
+ </summary>
+ <value></value>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="M:Case.Subs.Exceler8.Data.clsIoConfig.#ctor(System.String)">
+ <summary>
+ Configuration Helper
+ </summary>
+ <param name="p"></param>
+ <remarks></remarks>
+</member>
+<member name="M:Case.Subs.Exceler8.Data.clsIoConfig.ReadData">
+ <summary>
+ Read the File and Assign Stored Values
+ </summary>
+ <remarks></remarks>
+</member>
+<member name="M:Case.Subs.Exceler8.Data.clsIoConfig.WriteData">
+ <summary>
+ Write Stored Values to File
+ </summary>
+ <remarks></remarks>
+</member>
+<member name="M:Case.Subs.Exceler8.Data.clsIoConfig.DeleteFile">
+ <summary>
+ Delete the File
+ </summary>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="P:Case.Subs.Exceler8.Data.clsExcel.SelectedSyncHeaderColumns">
+ <summary>
+ Header Columns as they pass requirements from UI sync selections
+ Column Number is Key
+ </summary>
+ <value></value>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="P:Case.Subs.Exceler8.Data.clsExcel.KeyName">
+ <summary>
+ Key Name
+ </summary>
+ <value></value>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="P:Case.Subs.Exceler8.Data.clsExcel.IsFailed">
+ <summary>
+ Cannot Continue on Failure
+ </summary>
+ <value></value>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="P:Case.Subs.Exceler8.Data.clsExcel.WorkSheetColumns">
+ <summary>
+ List of Worksheets in Workbook
+  - Column Number as KEY
+  - - Header (Parameter Name and Kind) as Value
+ </summary>
+ <value></value>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="P:Case.Subs.Exceler8.Data.clsExcel.WorkSheetRows">
+ <summary>
+ Records the Keys and What Row they are on
+  - Worksheet Name
+  - - Key String ; Row Number
+ </summary>
+ <value></value>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="P:Case.Subs.Exceler8.Data.clsExcel.WorkSheetData">
+ <summary>
+ List of Worksheets in Workbook
+  - Rows of Data
+ </summary>
+ <value></value>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="P:Case.Subs.Exceler8.Data.clsExcel.HeaderRowNumber">
+ <summary>
+ Header Row
+ </summary>
+ <value></value>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="M:Case.Subs.Exceler8.Data.clsExcel.#ctor(System.String,Case.Subs.Exceler8.Data.clsSettings,Case.Subs.Exceler8.Data.EnumExcelSrartupMode)">
+ <summary>
+ Constructor
+ </summary>
+ <param name="filePath">Excel Workbook File Path</param>
+ <param name="s">Settings Object</param>
+ <param name="excelMode">Document Mode</param>
+ <remarks></remarks>
+</member>
+<member name="M:Case.Subs.Exceler8.Data.clsExcel.Setup">
+ <summary>
+ Class Setup
+ </summary>
+ <remarks></remarks>
+</member>
+<member name="M:Case.Subs.Exceler8.Data.clsExcel._GetFullDataRange(Microsoft.Office.Interop.Excel.Worksheet)">
+ <summary>
+ Return an Empty Array with Bounds set to maximum row and column counts
+ </summary>
+ <param name="ws">Worksheet to Check</param>
+ <returns>Range for all Data - no header</returns>
+ <remarks></remarks>
+</member>
+<member name="M:Case.Subs.Exceler8.Data.clsExcel._GetSelectedSyncHeaderColumns(System.String)">
+ <summary>
+ Get the Header Columns that were selected for data transfer.
+ Gets column names from IniFile Settings
+ </summary>
+ <param name="wsName">Worksheet Name to Target</param>
+ <remarks>Stores results in SelectedSyncHeaderColumns</remarks>
+</member>
+<member name="M:Case.Subs.Exceler8.Data.clsExcel._GetWorksheetNames">
+ <summary>
+ Get the List of Worksheet Names
+ </summary>
+ <remarks></remarks>
+</member>
+<member name="M:Case.Subs.Exceler8.Data.clsExcel.UpdateAfterSyncAddNewElements(Case.Subs.Exceler8.form_Progress,System.String)">
+ <summary>
+ Update With New Rows
+ </summary>
+ <param name="f">Progress Form</param>
+ <param name="n">Name of Excel Worksheet</param>
+ <remarks></remarks>
+</member>
+<member name="M:Case.Subs.Exceler8.Data.clsExcel.GetValues(System.String)">
+ <summary>
+ Get the Excel Data
+ </summary>
+ <param name="wsName">Worksheet Name</param>
+ <remarks></remarks>
+</member>
+<member name="M:Case.Subs.Exceler8.Data.clsExcel.GetHeaderData(System.String,System.Boolean)">
+ <summary>
+ Read the data in each worksheet and retrieve valid column names as parameter names
+ </summary>
+ <param name="keyName">Mandatory 'Key' Column (guid, ElementID, etc) that must be the first column with data</param>
+ <param name="useGroupNames">Match Group Names?</param>
+ <remarks></remarks>
+</member>
+<member name="M:Case.Subs.Exceler8.Data.clsExcel.AddWorksheets(System.Collections.Generic.List{System.String})">
+ <summary>
+ Copy a Worksheet Name as New Tab
+ </summary>
+ <param name="names">List of Tab Names to Create. Will copy from first tab</param>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="M:Case.Subs.Exceler8.Data.clsExcel.WriteWorksheetFromListOfString(System.String,System.Collections.Generic.List{System.Collections.Generic.List{System.String}})">
+ <summary>
+ Write DataTable to Worksheet
+ </summary>
+ <param name="worksheetName"></param>
+ <param name="dt"></param>
+ <remarks></remarks>    
+</member>
+<member name="M:Case.Subs.Exceler8.Data.clsExcel.UpdateWorksheetFromArray(System.String,System.Collections.Generic.Dictionary{System.String,System.Collections.Generic.SortedDictionary{System.String,System.Collections.Generic.SortedDictionary{System.String,Case.Subs.Exceler8.Data.clsExcelHeader}}},System.Array,System.Boolean,System.Int32)">
+ <summary>
+ Write Data to Excel
+ </summary>
+ <param name="worksheetName">Worksheet to write data</param>
+ <param name="headerDict">Header Object Scopes for Styling</param>
+ <param name="dt">Data as Array of String</param>
+ <param name="writeHeaders">Write Header data?</param>
+ <param name="startingRow">Row to start range writing</param>
+ <remarks></remarks>
+</member>
+<member name="M:Case.Subs.Exceler8.Data.clsExcel.ExcelStart">
+ <summary>
+ Start the Excel Application
+ </summary>
+ <returns>True on success</returns>
+ <remarks></remarks>
+</member>
+<member name="M:Case.Subs.Exceler8.Data.clsExcel.ExcelShutDown">
+ <summary>
+ Terminate the Excel Application
+ </summary>
+ <remarks></remarks>
+</member>
+<member name="T:Case.Subs.Exceler8.Data.clsRvtParameter">
+ <summary>
+ Helper class used to work with parameters 
+ </summary>
+ <remarks></remarks>
+</member>
+<member name="P:Case.Subs.Exceler8.Data.clsRvtParameter.Name">
+ <summary>
+ The name of the parameter
+ </summary>
+ <value></value>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="P:Case.Subs.Exceler8.Data.clsRvtParameter.ParameterObject">
+ <summary>
+ The parameter reference
+ </summary>
+ <value></value>
+ <returns>Parameter Object</returns>
+ <remarks></remarks>
+</member>
+<member name="P:Case.Subs.Exceler8.Data.clsRvtParameter.Value">
+ <summary>
+ Returns value of the parameter
+ </summary>
+ <value></value>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="P:Case.Subs.Exceler8.Data.clsRvtParameter.ValueString">
+ <summary>
+ Returns value of the parameter
+ as a string
+ </summary>
+ <value></value>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="M:Case.Subs.Exceler8.Data.clsRvtParameter.#ctor(Autodesk.Revit.DB.Parameter)">
+ <summary>
+ Constructor
+ </summary>
+ <param name="p"></param>
+ <remarks></remarks>
+</member>
+<member name="M:Case.Subs.Exceler8.Data.clsRvtParameter.SetValue(System.Object,System.Boolean)">
+ <summary>
+ Set a value to a parameter
+ </summary>
+ <param name="val"></param>
+ <param name="asString"></param>
+ <remarks></remarks>
+</member>
+<member name="M:Case.Subs.Exceler8.Data.clsRvtParameter.GetValue(System.Boolean)">
+ <summary>
+ Get the value of a parameter
+ </summary>
+ <param name="asString">Return as String?</param>
+ <returns>String representing the value</returns>
+ <remarks></remarks>
+</member>
+<member name="P:Case.Subs.Exceler8.Data.clsRvtSchedule.IsChecked">
+ <summary>
+ Inclusion
+ </summary>
+ <value></value>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="P:Case.Subs.Exceler8.Data.clsRvtSchedule.Name">
+ <summary>
+ Schedule Name
+ </summary>
+ <value></value>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="P:Case.Subs.Exceler8.Data.clsRvtSchedule.CategoryName">
+ <summary>
+ Category
+ </summary>
+ <value></value>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="P:Case.Subs.Exceler8.Data.clsRvtSchedule.FieldCount">
+ <summary>
+ Field Count
+ </summary>
+ <value></value>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="M:Case.Subs.Exceler8.Data.clsRvtSchedule.#ctor(Autodesk.Revit.DB.ViewSchedule)">
+ <summary>
+ Schedule Helper
+ </summary>
+ <param name="s"></param>
+ <remarks></remarks>
+</member>
+<member name="M:Case.Subs.Exceler8.Data.clsRvtSchedule.Setup">
+ <summary>
+ Basic Setup
+ </summary>
+ <remarks></remarks>
+</member>
+<member name="M:Case.Subs.Exceler8.Data.clsRvtSchedule.GetFieldNames">
+ <summary>
+ Fields
+ </summary>
+ <remarks></remarks>
+</member>
+<member name="M:Case.Subs.Exceler8.Data.clsRvtSchedule.GetFields">
+ <summary>
+ Fields in Schedule
+ </summary>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="M:Case.Subs.Exceler8.Data.clsRvtSchedule.GetCategory">
+ <summary>
+ Category
+ </summary>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="M:Case.Subs.Exceler8.Data.clsRvtSchedule.GetViewSchedule">
+ <summary>
+ Category
+ </summary>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="P:Case.Subs.Exceler8.Data.clsRvtWorksets.Name">
+ <summary>
+ Name
+ </summary>
+ <value></value>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="M:Case.Subs.Exceler8.Data.clsRvtWorksets.#ctor(Autodesk.Revit.DB.Workset)">
+ <summary>
+ Get Workset Data
+ </summary>
+ <param name="w"></param>
+ <remarks></remarks>
+</member>
+<member name="M:Case.Subs.Exceler8.Data.clsIoIni.#ctor(System.String)">
+ <summary>
+ Configuration Helper
+ </summary>
+ <param name="p"></param>
+ <remarks></remarks>
+</member>
+<member name="M:Case.Subs.Exceler8.Data.clsIoIni.Setup">
+ <summary>
+ Setup
+ </summary>
+ <remarks></remarks>
+</member>
+<member name="M:Case.Subs.Exceler8.Data.clsIoIni.UpdateSetting(System.String,System.String,System.Collections.Generic.List{Case.Subs.Exceler8.Data.clsDirection},System.Collections.Generic.List{Case.Subs.Exceler8.Data.clsDirection},System.Boolean)">
+ <summary>
+ Add or Update a Sync Setting
+ </summary>
+ <param name="fPath">Path to Excel Doc</param>
+ <param name="wsName">Worksheet Tab Name</param>
+ <param name="tList">List of Types</param>
+ <param name="iList">List of Instances</param>
+ <param name="isNumeric">Sync as Numeric</param>
+ <remarks></remarks>
+</member>
+<member name="M:Case.Subs.Exceler8.Data.clsIoIni.WriteIniFile">
+ <summary>
+ Update the INI File
+ </summary>
+ <remarks></remarks>
+</member>
+<member name="T:Case.Subs.Exceler8.Data.EnumExcelSrartupMode">
+ <summary>
+ Excel Mode for Startup
+ </summary>
+ <remarks></remarks>
+</member>
+<member name="T:Case.Subs.Exceler8.Data.EnumSyncDir">
+ <summary>
+ Direction to Synchronize
+ </summary>
+ <remarks></remarks>
+</member>
+<member name="T:Case.Subs.Exceler8.Data.EnumCellDataType">
+ <summary>
+ Revit Data Type (Normal, Read-Only, Complex)
+ </summary>
+ <remarks></remarks>
+</member>
+<member name="T:Case.Subs.Exceler8.Data.EnumExcelHeaderKind">
+ <summary>
+ Header Kind (Element, Type Instance)
+ </summary>
+ <remarks></remarks>
+</member>
+<member name="T:Case.Subs.Exceler8.Data.EnumRevitElementTableType">
+ <summary>
+ The kind of table to generate
+ </summary>
+ <remarks></remarks>
+</member>
+<member name="T:Case.Subs.Exceler8.Data.EnumOfficeVersion">
+ <summary>
+ Version of Excel
+ </summary>
+ <remarks></remarks>
+</member>
+<member name="P:Case.Subs.Exceler8.Data.clsSettings.PathAppData">
+ <summary>
+ Directory where Stored Export Settings are Saved
+ </summary>
+ <value></value>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="P:Case.Subs.Exceler8.Data.clsSettings.Version">
+ <summary>
+ App Version
+ </summary>
+ <value></value>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="P:Case.Subs.Exceler8.Data.clsSettings.OfficeInstallVersion">
+ <summary>
+ Excel Installation Check
+ </summary>
+ <value></value>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="P:Case.Subs.Exceler8.Data.clsSettings.Configurations">
+ <summary>
+ Configurations
+ </summary>
+ <remarks></remarks>
+</member>
+<member name="P:Case.Subs.Exceler8.Data.clsSettings.IniFile">
+ <summary>
+ INI File
+ </summary>
+ <remarks></remarks>
+</member>
+<member name="P:Case.Subs.Exceler8.Data.clsSettings.Doc">
+ <summary>
+ Active Document
+ </summary>
+ <value></value>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="P:Case.Subs.Exceler8.Data.clsSettings.DocName">
+ <summary>
+ Document Path
+ </summary>
+ <value></value>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="P:Case.Subs.Exceler8.Data.clsSettings.AvailableCategories">
+ <summary>
+ Categories
+ </summary>
+ <value></value>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="P:Case.Subs.Exceler8.Data.clsSettings.ExportCategories">
+ <summary>
+ Category to Process
+ </summary>
+ <value></value>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="P:Case.Subs.Exceler8.Data.clsSettings.ExportSchedules">
+ <summary>
+ Category to Process
+ </summary>
+ <value></value>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="P:Case.Subs.Exceler8.Data.clsSettings.UserWorksets">
+ <summary>
+ User Kind Worksets
+ </summary>
+ <value></value>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="P:Case.Subs.Exceler8.Data.clsSettings.Schedules">
+ <summary>
+ Schedule Views
+ </summary>
+ <value></value>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="P:Case.Subs.Exceler8.Data.clsSettings.Phases">
+ <summary>
+ Phases
+ </summary>
+ <value></value>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="P:Case.Subs.Exceler8.Data.clsSettings.Materials">
+ <summary>
+ Materials
+ </summary>
+ <value></value>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="M:Case.Subs.Exceler8.Data.clsSettings.#ctor(Autodesk.Revit.UI.ExternalCommandData,Autodesk.Revit.DB.ElementSet)">
+ <summary>
+ Constructor 
+ </summary>
+ <param name="cmd"></param>
+ <param name="eSet"></param>
+ <remarks></remarks>
+</member>
+<member name="M:Case.Subs.Exceler8.Data.clsSettings.Setup">
+ <summary>
+ Class Setup
+ </summary>
+ <remarks></remarks>
+</member>
+<member name="M:Case.Subs.Exceler8.Data.clsSettings.ExcelVerification">
+ <summary>
+ Verify the Installation of Proper Excel Version
+ </summary>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="M:Case.Subs.Exceler8.Data.clsSettings.ReadConfigurations">
+ <summary>
+ Read Configuration Data
+ </summary>
+ <remarks></remarks>
+</member>
+<member name="M:Case.Subs.Exceler8.Data.clsSettings.GetCategories">
+ <summary>
+ Get all Categories
+ </summary>
+ <remarks></remarks>
+</member>
+<member name="M:Case.Subs.Exceler8.Data.clsSettings.GetWorksets">
+ <summary>
+ Get all User Worksets
+ </summary>
+ <remarks></remarks>
+</member>
+<member name="M:Case.Subs.Exceler8.Data.clsSettings.GetMaterials">
+ <summary>
+ Get Materials
+ </summary>
+ <remarks></remarks>
+</member>
+<member name="M:Case.Subs.Exceler8.Data.clsSettings.GetPhases">
+ <summary>
+ Get Phases
+ </summary>
+ <remarks></remarks>
+</member>
+<member name="M:Case.Subs.Exceler8.Data.clsSettings.GetSchedules">
+ <summary>
+ Schedules
+ </summary>
+ <remarks></remarks>
+</member>
+<member name="M:Case.Subs.Exceler8.Data.clsSettings.SetComplexDataValue(Case.Subs.Exceler8.Data.clsRvtParameter,System.String)">
+ <summary>
+ Set a Complex Value 
+ </summary>
+ <param name="p">Parameter Helper</param>
+ <param name="inputValue">Excel Value</param>
+ <returns>TRUE on Success</returns>
+ <remarks></remarks>
+</member>
+<member name="M:Case.Subs.Exceler8.Data.clsSettings.GetFileMajorVersion(System.String)">
+ <summary>
+ File version from path to File
+ </summary>
+ <param name="p">File Path to Check</param>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="M:Case.Subs.Exceler8.Data.clsSettings.GetElements(System.Boolean,Autodesk.Revit.DB.ElementId)">
+ <summary>
+ Get Elements by Category
+ </summary>
+ <param name="isType">Collect Types when TRUE, Instances otherwise</param>
+ <param name="catId">Category ID</param>
+ <returns>List of elements matching search criteria</returns>
+ <remarks></remarks>
+</member>
+<member name="M:Case.Subs.Exceler8.Data.clsSettings.UpdateElementValues(Autodesk.Revit.DB.Element,System.Collections.Generic.List{Case.Subs.Exceler8.Data.clsValue},System.Collections.Generic.List{Case.Subs.Exceler8.Data.clsValue},System.Boolean)">
+ <summary>
+ Update Revit element and send CHANGED values back for Excel
+ </summary>
+ <param name="e">Element</param>
+ <param name="directParams">Parameters that are directly on this element</param>
+ <param name="parentParams">Parameters on this element's type</param>
+ <param name="asNumeric">TRUE will deal with numeric parameters as numbers</param>
+ <returns>List of Values for Excel Changes</returns>
+ <remarks></remarks>
+</member>
+<member name="T:Case.Subs.Exceler8.Data.clsExcelHeader">
+ <summary>
+ Header Name and Kind
+ </summary>
+ <remarks></remarks>
+</member>
+<member name="P:Case.Subs.Exceler8.Data.clsExcelHeader.Name">
+ <summary>
+ Column (Parameter) Name
+ </summary>
+ <value></value>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="P:Case.Subs.Exceler8.Data.clsExcelHeader.Kind">
+ <summary>
+ Kind of Item (E, I, T)
+ </summary>
+ <value></value>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="P:Case.Subs.Exceler8.Data.clsExcelHeader.DataType">
+ <summary>
+ Revit Data Type (Normal, Read-Only, Complex)
+ </summary>
+ <value></value>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="P:Case.Subs.Exceler8.Data.clsExcelHeader.GroupName">
+ <summary>
+ Group Name
+ </summary>
+ <value></value>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="P:Case.Subs.Exceler8.Data.clsExcelHeader.Direction">
+ <summary>
+ Sync Direction
+ </summary>
+ <value></value>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="M:Case.Subs.Exceler8.Data.clsExcelHeader.#ctor(System.String,Case.Subs.Exceler8.Data.EnumExcelHeaderKind,System.String,Case.Subs.Exceler8.Data.EnumCellDataType)">
+ <summary>
+ Name and Kind
+ </summary>
+ <param name="n">Name</param>
+ <param name="k">Kind</param>
+ <param name="g">Group Name (for duplicates)</param>
+ <remarks></remarks>
+</member>
+<member name="T:Case.Subs.Exceler8.Data.clsValue">
+ <summary>
+ Name and Value Helper
+ </summary>
+ <remarks></remarks>
+</member>
+<member name="P:Case.Subs.Exceler8.Data.clsValue.Group">
+ <summary>
+ Parameter Group Name
+ </summary>
+ <value></value>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="P:Case.Subs.Exceler8.Data.clsValue.Name">
+ <summary>
+ Parameter Name
+ </summary>
+ <value></value>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="P:Case.Subs.Exceler8.Data.clsValue.Value">
+ <summary>
+ Existing Parameter Value
+ </summary>
+ <value></value>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="P:Case.Subs.Exceler8.Data.clsValue.NewValue">
+ <summary>
+ New Parameter Value
+ </summary>
+ <value></value>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="P:Case.Subs.Exceler8.Data.clsValue.Direction">
+ <summary>
+ Used During Synchronization
+ </summary>
+ <value></value>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="M:Case.Subs.Exceler8.Data.clsValue.#ctor(System.String,System.String,System.String)">
+ <summary>
+ Name and Value
+ </summary>
+ <param name="g">Group</param>
+ <param name="n">Name</param>
+ <param name="v">Value</param>
+ <remarks></remarks>
+</member>
+<member name="T:Case.Subs.Exceler8.Entry.DE309158ACE741799F90E9210DEEF5F3">
+ <summary>
+ Schedule Export
+ </summary>
+ <remarks></remarks>
+</member>
+<member name="M:Case.Subs.Exceler8.Entry.DE309158ACE741799F90E9210DEEF5F3.Execute(Autodesk.Revit.UI.ExternalCommandData,System.String@,Autodesk.Revit.DB.ElementSet)">
+ <summary>
+ Command Entry Point
+ </summary>
+ <param name="commandData"></param>
+ <param name="message"></param>
+ <param name="elements"></param>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="T:Case.Subs.Exceler8.Entry.DE309158ACE741799F90E9210DEEF5F4">
+ <summary>
+ Smart Import
+ </summary>
+ <remarks></remarks>
+</member>
+<member name="M:Case.Subs.Exceler8.Entry.DE309158ACE741799F90E9210DEEF5F4.Execute(Autodesk.Revit.UI.ExternalCommandData,System.String@,Autodesk.Revit.DB.ElementSet)">
+ <summary>
+ Command Entry Point
+ </summary>
+ <param name="commandData"></param>
+ <param name="message"></param>
+ <param name="elements"></param>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="T:Case.Subs.Exceler8.Entry.DE309158ACE741799F90E9210DEEF5F1">
+ <summary>
+ Category Export
+ </summary>
+ <remarks></remarks>
+</member>
+<member name="M:Case.Subs.Exceler8.Entry.DE309158ACE741799F90E9210DEEF5F1.Execute(Autodesk.Revit.UI.ExternalCommandData,System.String@,Autodesk.Revit.DB.ElementSet)">
+ <summary>
+ Command Entry Point
+ </summary>
+ <param name="commandData"></param>
+ <param name="message"></param>
+ <param name="elements"></param>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="T:Case.Subs.Exceler8.Entry.DE309158ACE741799F90E9210DEEF5F2">
+ <summary>
+ Sync - Import
+ </summary>
+ <remarks></remarks>
+</member>
+<member name="M:Case.Subs.Exceler8.Entry.DE309158ACE741799F90E9210DEEF5F2.Execute(Autodesk.Revit.UI.ExternalCommandData,System.String@,Autodesk.Revit.DB.ElementSet)">
+ <summary>
+ Command Entry Point
+ </summary>
+ <param name="commandData"></param>
+ <param name="message"></param>
+ <param name="elements"></param>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="T:Case.Subs.Exceler8.SortableBindingList`1">
+ <summary>
+ From http://www.timvw.be/presenting-the-sortablebindinglistt-take-two
+ Converted to VB and slightly modified for general use by Don Rudder
+ </summary>
+</member>
+<member name="T:Case.Subs.Exceler8.PropertyComparer`1">
+ <summary>
+ From http://www.timvw.be/presenting-the-sortablebindinglistt-take-two
+ Converted to VB and slightly modified for general use by Don Rudder, HOK
+ </summary>
+</member>
+<member name="M:Case.Subs.Exceler8.form_Export.#ctor(Case.Subs.Exceler8.Data.clsSettings)">
+ <summary>
+ Constructor
+ </summary>
+ <param name="s"></param>
+ <remarks></remarks>
+</member>
+<member name="M:Case.Subs.Exceler8.form_Export.ExportData(Case.Subs.Exceler8.Data.clsIoConfig)">
+ <summary>
+ Export the Excel Data
+ </summary>
+ <param name="c">Configuration to Export</param>
+ <remarks></remarks>
+</member>
+<member name="M:Case.Subs.Exceler8.form_Export.LoadCategories(Case.Subs.Exceler8.form_Export.EnumCheckState)">
+ <summary>
+ Load Categories List
+ </summary>
+ <param name="ch">Set as Checked?</param>
+ <remarks></remarks>
+</member>
+<member name="M:Case.Subs.Exceler8.form_Export.LoadConfigurations(System.String)">
+ <summary>
+ Load Configurations
+ </summary>
+ <remarks></remarks>
+</member>
+<member name="M:Case.Subs.Exceler8.form_Export.GetConfigFromForm(System.String)">
+ <summary>
+ Configuration By Form Settings
+ </summary>
+ <param name="n"></param>
+ <remarks></remarks>
+</member>
+<member name="M:Case.Subs.Exceler8.form_Export.form_Export_Shown(System.Object,System.EventArgs)">
+ <summary>
+ Form Loaded
+ </summary>
+ <param name="sender"></param>
+ <param name="e"></param>
+ <remarks></remarks>
+</member>
+<member name="M:Case.Subs.Exceler8.form_Export.SetFormViz(Case.Subs.Exceler8.form_Export.EnumFormViz)">
+ <summary>
+ Form Settings Based on State
+ </summary>
+ <param name="fv"></param>
+ <remarks></remarks>
+</member>
+<member name="M:Case.Subs.Exceler8.form_Export.ButtonSavedNew_Click(System.Object,System.EventArgs)">
+ <summary>
+ Get a Name for the New Item
+ </summary>
+ <param name="sender"></param>
+ <param name="e"></param>
+ <remarks></remarks>
+</member>
+<member name="M:Case.Subs.Exceler8.form_Export.ButtonRemove_Click(System.Object,System.EventArgs)">
+ <summary>
+ Delete Selected Combo Item
+ </summary>
+ <param name="sender"></param>
+ <param name="e"></param>
+ <remarks></remarks>
+</member>
+<member name="M:Case.Subs.Exceler8.form_Export.ComboBoxConfigurations_SelectedIndexChanged(System.Object,System.EventArgs)">
+ <summary>
+ Change Selected Configuration Settings
+ </summary>
+ <param name="sender"></param>
+ <param name="e"></param>
+ <remarks></remarks>
+</member>
+<member name="M:Case.Subs.Exceler8.form_Export.ButtonHelp_Click(System.Object,System.EventArgs)">
+ <summary>
+ Documentation Page 
+ </summary>
+ <param name="sender"></param>
+ <param name="e"></param>
+ <remarks></remarks>
+</member>
+<member name="M:Case.Subs.Exceler8.form_Export.ButtonOk_Click(System.Object,System.EventArgs)">
+ <summary>
+ Commit
+ </summary>
+ <param name="sender"></param>
+ <param name="e"></param>
+ <remarks></remarks>
+</member>
+<member name="M:Case.Subs.Exceler8.form_Export.ButtonCancel_Click(System.Object,System.EventArgs)">
+ <summary>
+ Close
+ </summary>
+ <param name="sender"></param>
+ <param name="e"></param>
+ <remarks></remarks>
+</member>
+<member name="M:Case.Subs.Exceler8.form_Export.ButtonCheckAll_Click(System.Object,System.EventArgs)">
+ <summary>
+ Check All Categories
+ </summary>
+ <param name="sender"></param>
+ <param name="e"></param>
+ <remarks></remarks>
+</member>
+<member name="M:Case.Subs.Exceler8.form_Export.ButtonCheckNone_Click(System.Object,System.EventArgs)">
+ <summary>
+ Check None Categories
+ </summary>
+ <param name="sender"></param>
+ <param name="e"></param>
+ <remarks></remarks>
+</member>
+<member name="M:Case.Subs.Exceler8.form_Export.TextBoxFind_TextChanged(System.Object,System.EventArgs)">
+ <summary>
+ Filter Categories List
+ </summary>
+ <param name="sender"></param>
+ <param name="e"></param>
+ <remarks></remarks>
+</member>
+<member name="M:Case.Subs.Exceler8.form_ExportSchedule.#ctor(Case.Subs.Exceler8.Data.clsSettings)">
+ <summary>
+ Constructor
+ </summary>
+ <param name="s"></param>
+ <remarks></remarks>
+</member>
+<member name="M:Case.Subs.Exceler8.form_ExportSchedule.ShowSchedules(System.Boolean)">
+ <summary>
+ Load Datagridview
+ </summary>
+ <param name="isChecked"></param>
+ <remarks></remarks>
+</member>
+<member name="M:Case.Subs.Exceler8.form_ExportSchedule.ExportSchedules(System.Collections.Generic.List{Case.Subs.Exceler8.Data.clsRvtSchedule})">
+ <summary>
+ Export Data
+ </summary>
+ <param name="schedules"></param>
+ <remarks></remarks>
+</member>
+<member name="M:Case.Subs.Exceler8.form_ExportSchedule.SetFormViz(Case.Subs.Exceler8.form_ExportSchedule.EnumFormViz)">
+ <summary>
+ Form Controlls
+ </summary>
+ <param name="f"></param>
+ <remarks></remarks>
+</member>
+<member name="M:Case.Subs.Exceler8.form_ExportSchedule.form_ExportSchedule_Shown(System.Object,System.EventArgs)">
+ <summary>
+ Load Form Data
+ </summary>
+ <param name="sender"></param>
+ <param name="e"></param>
+ <remarks></remarks>
+</member>
+<member name="M:Case.Subs.Exceler8.form_ExportSchedule.ButtonCancel_Click(System.Object,System.EventArgs)">
+ <summary>
+ Cancel
+ </summary>
+ <param name="sender"></param>
+ <param name="e"></param>
+ <remarks></remarks>
+</member>
+<member name="M:Case.Subs.Exceler8.form_ExportSchedule.ButtonOk_Click(System.Object,System.EventArgs)">
+ <summary>
+ Commit
+ </summary>
+ <param name="sender"></param>
+ <param name="e"></param>
+ <remarks></remarks>
+</member>
+<member name="M:Case.Subs.Exceler8.form_ExportSchedule.ButtonHelp_Click(System.Object,System.EventArgs)">
+ <summary>
+ Help
+ </summary>
+ <param name="sender"></param>
+ <param name="e"></param>
+ <remarks></remarks>
+</member>
+<member name="M:Case.Subs.Exceler8.form_ExportSchedule.ButtonCheckNone_Click(System.Object,System.EventArgs)">
+ <summary>
+ Uncheck All
+ </summary>
+ <param name="sender"></param>
+ <param name="e"></param>
+ <remarks></remarks>
+</member>
+<member name="M:Case.Subs.Exceler8.form_ExportSchedule.ButtonCheckAll_Click(System.Object,System.EventArgs)">
+ <summary>
+ Check All
+ </summary>
+ <param name="sender"></param>
+ <param name="e"></param>
+ <remarks></remarks>
+</member>
+<member name="M:Case.Subs.Exceler8.form_Sync.#ctor(Case.Subs.Exceler8.Data.clsSettings,Case.Subs.Exceler8.Data.clsExcel)">
+ <summary>
+ Constructor
+ </summary>
+ <param name="s">Settings</param>
+ <param name="e">Excel Helper</param>
+ <remarks></remarks>
+</member>
+<member name="M:Case.Subs.Exceler8.form_Sync.GetCategoryAndKeys(System.String)">
+ <summary>
+ Get the category from first found element and store all keys with array row numbers
+ </summary>
+ <param name="wsName">Worksheet Name to Process</param>
+ <returns>True if a type element set</returns>
+ <remarks></remarks>
+</member>
+<member name="M:Case.Subs.Exceler8.form_Sync.SyncExcelAndRevit">
+ <summary>
+ Synchronize Data
+ </summary>
+ <remarks></remarks>
+</member>
+<member name="M:Case.Subs.Exceler8.form_Sync.UpdateElementData(System.Array@,Autodesk.Revit.DB.Element,System.String,System.Boolean,System.Boolean,System.Int32,System.Collections.Generic.SortedDictionary{System.Int32,Case.Subs.Exceler8.Data.clsExcelHeader},System.Boolean)">
+ <summary>
+ Update Data from Elements
+ </summary>
+ <param name="ar">Array</param>
+ <param name="e">Element</param>
+ <param name="wsName">Worksheet Name</param>
+ <param name="hasType">TRUE if has types</param>
+ <param name="hasInst">TRUE if has instances</param>
+ <param name="i">row id</param>
+ <param name="isZeroBased">Subtract 1 from x.key if True</param>
+ <remarks></remarks>
+</member>
+<member name="M:Case.Subs.Exceler8.form_Sync.SaveIniFile">
+ <summary>
+ Save Settings to INI File
+ </summary>
+ <remarks></remarks>
+</member>
+<member name="M:Case.Subs.Exceler8.form_Sync.UpdateWorksheetData">
+ <summary>
+ Display Parameter Data for Selected Worksheet in Datagrids
+ </summary>
+ <remarks></remarks>
+</member>
+<member name="M:Case.Subs.Exceler8.form_Sync.SetFormViz(Case.Subs.Exceler8.form_Sync.formViz)">
+ <summary>
+ Form Controls by State
+ </summary>
+ <param name="fv"></param>
+ <remarks></remarks>
+</member>
+<member name="M:Case.Subs.Exceler8.form_Sync.form_Import_Shown(System.Object,System.EventArgs)">
+ <summary>
+ Form Setup
+ </summary>
+ <param name="sender"></param>
+ <param name="e"></param>
+ <remarks></remarks>
+</member>
+<member name="M:Case.Subs.Exceler8.form_Sync.ButtonInstImport_Click(System.Object,System.EventArgs)">
+ <summary>
+ Instance to all Import
+ </summary>
+ <param name="sender"></param>
+ <param name="e"></param>
+ <remarks></remarks>
+</member>
+<member name="M:Case.Subs.Exceler8.form_Sync.ButtonInstExport_Click(System.Object,System.EventArgs)">
+ <summary>
+ Instance to all Export
+ </summary>
+ <param name="sender"></param>
+ <param name="e"></param>
+ <remarks></remarks>
+</member>
+<member name="M:Case.Subs.Exceler8.form_Sync.ButtonInstNone_Click(System.Object,System.EventArgs)">
+ <summary>
+ Instance to all Ignore
+ </summary>
+ <param name="sender"></param>
+ <param name="e"></param>
+ <remarks></remarks>
+</member>
+<member name="M:Case.Subs.Exceler8.form_Sync.ButtonTypeImport_Click(System.Object,System.EventArgs)">
+ <summary>
+ Type to all Import
+ </summary>
+ <param name="sender"></param>
+ <param name="e"></param>
+ <remarks></remarks>
+</member>
+<member name="M:Case.Subs.Exceler8.form_Sync.ButtonTypeExport_Click(System.Object,System.EventArgs)">
+ <summary>
+ Type to all Export
+ </summary>
+ <param name="sender"></param>
+ <param name="e"></param>
+ <remarks></remarks>
+</member>
+<member name="M:Case.Subs.Exceler8.form_Sync.ButtonTypeNone_Click(System.Object,System.EventArgs)">
+ <summary>
+ Type to all Ignore
+ </summary>
+ <param name="sender"></param>
+ <param name="e"></param>
+ <remarks></remarks>
+</member>
+<member name="M:Case.Subs.Exceler8.form_Sync.ButtonCancel_Click(System.Object,System.EventArgs)">
+ <summary>
+ Cancel 
+ </summary>
+ <param name="sender"></param>
+ <param name="e"></param>
+ <remarks></remarks>
+</member>
+<member name="M:Case.Subs.Exceler8.form_Sync.ButtonOk_Click(System.Object,System.EventArgs)">
+ <summary>
+ Commit
+ </summary>
+ <param name="sender"></param>
+ <param name="e"></param>
+ <remarks></remarks>
+</member>
+<member name="M:Case.Subs.Exceler8.form_Sync.ButtonHelp_Click(System.Object,System.EventArgs)">
+ <summary>
+ Launc Help Site
+ </summary>
+ <param name="sender"></param>
+ <param name="e"></param>
+ <remarks></remarks>
+</member>
+<member name="M:Case.Subs.Exceler8.form_Sync.ComboBoxWorksheets_SelectedIndexChanged(System.Object,System.EventArgs)">
+ <summary>
+ Tab Selection Change
+ </summary>
+ <param name="sender"></param>
+ <param name="e"></param>
+ <remarks></remarks>
+</member>
+<member name="M:Case.Subs.Exceler8.form_Name.ButtonCancel_Click(System.Object,System.EventArgs)">
+ <summary>
+ No Name
+ </summary>
+ <param name="sender"></param>
+ <param name="e"></param>
+ <remarks></remarks>
+</member>
+<member name="M:Case.Subs.Exceler8.form_Name.ButtonOk_Click(System.Object,System.EventArgs)">
+ <summary>
+ OK
+ </summary>
+ <param name="sender"></param>
+ <param name="e"></param>
+ <remarks></remarks>
+</member>
+<member name="M:Case.Subs.Exceler8.form_Name.TextBoxName_KeyDown(System.Object,System.Windows.Forms.KeyEventArgs)">
+ <summary>
+ Enter in Textbox
+ </summary>
+ <param name="sender"></param>
+ <param name="e"></param>
+ <remarks></remarks>
+</member>
+<member name="M:Case.Subs.Exceler8.form_Progress.#ctor(System.String,System.Int32)">
+ <summary>
+ Progress Form
+ </summary>
+ <param name="t">Progress Title</param>
+ <param name="m">Max Value</param>
+ <remarks></remarks>
+</member>
+<member name="M:Case.Subs.Exceler8.form_Progress.UpdateMaxAndValue(System.Int32,System.Int32)">
+ <summary>
+ Update Maximums, etc
+ </summary>
+ <param name="mVal">New Max Value</param>
+ <param name="cVal">New Value</param>
+ <remarks></remarks>
+</member>
+<member name="M:Case.Subs.Exceler8.form_Progress.StepProgress(System.String)">
+ <summary>
+ Step the Progress Bar
+ </summary>
+ <param name="t">Optional Progress Title</param>
+ <remarks></remarks>
+</member>
+<member name="M:Case.Subs.Exceler8.form_SmartSync.#ctor(Case.Subs.Exceler8.Data.clsSettings)">
+ <summary>
+ Smart Import Form
+ </summary>
+ <param name="s"></param>
+ <remarks></remarks>
+</member>
+<member name="M:Case.Subs.Exceler8.form_SmartSync.form_SmartImport_Shown(System.Object,System.EventArgs)">
+ <summary>
+ Form Load
+ </summary>
+ <param name="sender"></param>
+ <param name="e"></param>
+ <remarks></remarks>
+</member>
+<member name="M:Case.Subs.Exceler8.form_SmartSync.ButtonCancel_Click(System.Object,System.EventArgs)">
+ <summary>
+ Close
+ </summary>
+ <param name="sender"></param>
+ <param name="e"></param>
+ <remarks></remarks>
+</member>
+<member name="M:Case.Subs.Exceler8.form_SmartSync.ButtonOk_Click(System.Object,System.EventArgs)">
+ <summary>
+ Commit
+ </summary>
+ <param name="sender"></param>
+ <param name="e"></param>
+ <remarks></remarks>
+</member>
+<member name="M:Case.Subs.Exceler8.form_SmartSync.ButtonHelp_Click(System.Object,System.EventArgs)">
+ <summary>
+ Help
+ </summary>
+ <param name="sender"></param>
+ <param name="e"></param>
+ <remarks></remarks>
+</member>
+</members>
+</doc>
