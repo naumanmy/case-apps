@@ -50,7 +50,7 @@
     <AssemblyName>Case.DeleteViewsAndPurge</AssemblyName>
   </PropertyGroup>
   <PropertyGroup>
-    <SignAssembly>false</SignAssembly>
+    <SignAssembly>true</SignAssembly>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="RevitAPI">
