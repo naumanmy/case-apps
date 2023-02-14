@@ -1,5 +1,5 @@
-#define MyAppName "CASE Apps"
-#define MyAppVersion "22.0.0"
+#define MyAppName "CASE Apps 2023"
+#define MyAppVersion "23.0.0"
 #define MyAppPublisher "CASE"
 #define MyAppURL "https://github.com/rudderdon/case-apps"
 
