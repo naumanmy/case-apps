@@ -1,0 +1,10 @@
+copy "$(TargetDir)*" "$(SolutionDir)\deploy\2023" /Y
+xcopy /y "$(TargetDir)*" "$(SolutionDir)\deploy\2023"
+
+D:\1D\OneDrive\Documents (1)\GitHub\case-apps\assets\exclude.txtSeverity	Code	Description	Project	File	Line	Suppression State
+Error		The command "
+xcopy "D:\1D\OneDrive\Documents (1)\GitHub\case-apps\2023\Case.DeleteViewsAndPurge\Case.DeleteViewsAndPurge\bin\Debug\*.*" "D:\1D\OneDrive\Documents (1)\GitHub\case-apps\deploy\2023" /y/EXCLUDE:"D:\1D\OneDrive\Documents (1)\GitHub\case-apps\assets\exclude.txt"		
+
+
+
+%WINDIR%\SYSTEM32\robocopy.exe "$(TargetDir)" "$(SolutionDir)\deploy\2023" /V /NP /TBD /XF *.PDB *.config *.xml *.tmp *.addin  /R:10 /W:30

@@ -1,7 +1,7 @@
 #define MyAppName "CASE Apps 2023"
 #define MyAppVersion "23.0.0"
 #define MyAppPublisher "CASE"
-#define MyAppURL "https://github.com/rudderdon/case-apps"
+#define MyAppURL "https://github.com/naumanmy/case-apps"
 
 #define RevitAppName  "Case.Apps"
 #define RevitAddinFolder "{userappdata}\Autodesk\REVIT\Addins"
