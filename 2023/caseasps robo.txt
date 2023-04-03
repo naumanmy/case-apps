@@ -8,3 +8,11 @@ xcopy "D:\1D\OneDrive\Documents (1)\GitHub\case-apps\2023\Case.DeleteViewsAndPur
 
 
 %WINDIR%\SYSTEM32\robocopy.exe "$(TargetDir)" "$(SolutionDir)\deploy\2023" /V /NP /TBD /XF *.PDB *.config *.xml *.tmp *.addin  /R:10 /W:30
+
+
+Severity	Code	Description	Project	File	Line	Suppression State
+Error		The command "%WINDIR%\SYSTEM32\robocopy.exe "D:\1D\OneDrive\Documents (1)\GitHub\case-apps\2023\Case.DeleteViewsAndPurge\Case.DeleteViewsAndPurge\bin\Debug\"  "D:\1D\OneDrive\Documents (1)\GitHub\case-apps\deploy\2023" /V /NP /TBD /XF *.PDB *.config *.xml *.tmp *.addin  /R:10 /W:30" exited with code 16.	Case.DeleteViewsAndPurge			
+
+
+
+ robocopy "G:\Users\The Aijaz family\Documents"  D:\Aijaz\Documents /S /MT /LOG:D:\AIJAZ\copdoc.txt /TEE /XJ /w:2 /R:2  /IS /XF *.zip

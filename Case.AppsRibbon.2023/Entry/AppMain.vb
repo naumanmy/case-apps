@@ -391,9 +391,9 @@ Namespace Entry
         ''' Load the Controls
         ''' </summary>
         ''' <remarks></remarks>
-        Private Sub LoadItemsTwo()
 
-            Try
+
+        Try
 
                 If _uiApp.ControlledApplication.VersionName.ToLower.Contains("vasari") Then Return
 

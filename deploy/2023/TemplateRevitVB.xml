@@ -2,55 +2,192 @@
 <doc>
 <assembly>
 <name>
-Case.BasicReporting
+Case.Subs.Renamer
 </name>
 </assembly>
 <members>
-<member name="T:Case.BasicReporting.My.Resources.Resources">
-<summary>
-  A strongly-typed resource class, for looking up localized strings, etc.
-</summary>
-</member>
-<member name="P:Case.BasicReporting.My.Resources.Resources.ResourceManager">
-<summary>
-  Returns the cached ResourceManager instance used by this class.
-</summary>
-</member>
-<member name="P:Case.BasicReporting.My.Resources.Resources.Culture">
-<summary>
-  Overrides the current thread's CurrentUICulture property for all
-  resource lookups using this strongly typed resource class.
-</summary>
-</member>
-<member name="P:Case.BasicReporting.My.Resources.Resources.Case_Clearly">
-<summary>
-  Looks up a localized resource of type System.Drawing.Bitmap.
-</summary>
-</member>
-<member name="M:Case.BasicReporting.Data.clsFormulas.#ctor(Autodesk.Revit.DB.FamilySymbol,System.String,System.String,System.Boolean)">
+<member name="P:Case.Subs.Renamer.Data.clsCategory.IsChecked">
  <summary>
- Basic Constructor
+ Checked for Inclusion
+ </summary>
+ <value></value>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="P:Case.Subs.Renamer.Data.clsCategory.CatName">
+ <summary>
+ Category Name
+ </summary>
+ <value></value>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="M:Case.Subs.Renamer.Data.clsCategory.#ctor(Autodesk.Revit.DB.Category)">
+ <summary>
+ Category Helper
+ </summary>
+ <param name="c"></param>
+ <remarks></remarks>
+</member>
+<member name="M:Case.Subs.Renamer.Data.clsCategory.GetCategory">
+ <summary>
+ Get the Category without being a property
+ </summary>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="P:Case.Subs.Renamer.Data.clsExcel.IsFailed">
+ <summary>
+ Cannot Continue on Failure
+ </summary>
+ <value></value>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="P:Case.Subs.Renamer.Data.clsExcel.WorkSheetNames">
+ <summary>
+ List of Worksheets in Workbook
+ </summary>
+ <value></value>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="M:Case.Subs.Renamer.Data.clsExcel.#ctor(System.String,Case.Subs.Renamer.Data.clsSettings,Case.Subs.Renamer.Data.EnumExcelWriteMode)">
+ <summary>
+ Constructor
+ </summary>
+ <param name="filePath">Excel Workbook File Path</param>
+ <param name="s">Settings Object</param>
+ <param name="excelMode">Document Mode</param>
+ <remarks></remarks>
+</member>
+<member name="M:Case.Subs.Renamer.Data.clsExcel.Setup">
+ <summary>
+ Class Setup
  </summary>
  <remarks></remarks>
 </member>
-<member name="M:Case.BasicReporting.Data.clsHosts.#ctor(Autodesk.Revit.DB.FamilyInstance,Autodesk.Revit.DB.ElementId,Case.BasicReporting.Data.clsHosts.hostType)">
+<member name="M:Case.Subs.Renamer.Data.clsExcel.GetWorksheetNames">
  <summary>
- Constructor for Host
+ Get the List of Worksheet Names
+ </summary>
+ <remarks></remarks>
+</member>
+<member name="M:Case.Subs.Renamer.Data.clsExcel.FillDataTableBySheetName(System.String)">
+ <summary>
+ Fill from Excel column
+ </summary>
+ <param name="nameColumn">Name of the column</param>
+ <returns>True on success</returns>
+ <remarks></remarks>
+</member>
+<member name="M:Case.Subs.Renamer.Data.clsExcel.FillDataTableFromExcelWorksheet(System.String)">
+ <summary>
+ Fill from Excel Worksheet
+ </summary>
+ <param name="wsName">Worksheet name</param>
+ <returns>Datatable of resulting data</returns>
+ <remarks></remarks>
+</member>
+<member name="M:Case.Subs.Renamer.Data.clsExcel.FillExcelWorksheetFromDataTable(System.Data.DataTable)">
+ <summary>
+ Fill Excel Worksheet from DataTable
+ </summary>
+ <param name="dt">Datatable to Write</param>
+ <returns>True on success</returns>
+ <remarks>Header is assumed to be first row, data starts on row 2</remarks>
+</member>
+<member name="M:Case.Subs.Renamer.Data.clsExcel.StartExcel">
+ <summary>
+ Start the Excel Application
+ </summary>
+ <returns>True on success</returns>
+ <remarks></remarks>
+</member>
+<member name="M:Case.Subs.Renamer.Data.clsExcel.ShutDownExcel">
+ <summary>
+ Terminate the Excel Application
+ </summary>
+ <remarks></remarks>
+</member>
+<member name="P:Case.Subs.Renamer.Data.clsFamilyType.ElementId">
+ <summary>
+ ElementID
+ </summary>
+ <value></value>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="P:Case.Subs.Renamer.Data.clsFamilyType.CategoryName">
+ <summary>
+ Category Name
+ </summary>
+ <value></value>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="P:Case.Subs.Renamer.Data.clsFamilyType.CurrentFamilyName">
+ <summary>
+ Current Family Name
+ </summary>
+ <value></value>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="P:Case.Subs.Renamer.Data.clsFamilyType.CurrentTypeName">
+ <summary>
+ Current Type Name
+ </summary>
+ <value></value>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="P:Case.Subs.Renamer.Data.clsFamilyType.TypeNameChange">
+ <summary>
+ Type Name Change for Datagrid
+ </summary>
+ <value></value>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="P:Case.Subs.Renamer.Data.clsFamilyType.FamilyNameChange">
+ <summary>
+ Family Name Change for Datagrid
+ </summary>
+ <value></value>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="M:Case.Subs.Renamer.Data.clsFamilyType.#ctor(Autodesk.Revit.DB.Element,System.String,System.String)">
+ <summary>
+ Manage a Family 
  </summary>
  <param name="e"></param>
- <param name="hostId"></param>
- <param name="hType"></param>
+ <param name="famName"></param>
+ <param name="tName"></param>
  <remarks></remarks>
 </member>
-<member name="M:Case.BasicReporting.Data.clsHosts.#ctor(Autodesk.Revit.DB.Element,Autodesk.Revit.DB.Element)">
+<member name="M:Case.Subs.Renamer.Data.clsFamilyType.RenameElement">
  <summary>
- From basic Elements
+ Rename the Element
  </summary>
- <param name="e"></param>
- <param name="host"></param>
+ <returns></returns>
  <remarks></remarks>
 </member>
-<member name="P:Case.BasicReporting.Data.clsSettings.Doc">
+<member name="M:Case.Subs.Renamer.Data.clsFamilyType.GetUid">
+ <summary>
+ UniqueID
+ </summary>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="T:Case.Subs.Renamer.Data.clsRenameResult">
+ <summary>
+ Tracks the Progress and failures of renames
+ </summary>
+ <remarks></remarks>
+</member>
+<member name="P:Case.Subs.Renamer.Data.clsSettings.Doc">
  <summary>
  The Active Document
  </summary>
@@ -58,135 +195,195 @@ Case.BasicReporting
  <returns></returns>
  <remarks></remarks>
 </member>
-<member name="P:Case.BasicReporting.Data.clsSettings.DocName">
+<member name="P:Case.Subs.Renamer.Data.clsSettings.DocName">
  <summary>
- Path to Active Doc
+ Document Path
  </summary>
  <value></value>
  <returns></returns>
  <remarks></remarks>
 </member>
-<member name="P:Case.BasicReporting.Data.clsSettings.AppVersion">
+<member name="P:Case.Subs.Renamer.Data.clsSettings.UiApp">
  <summary>
- App Version
+ The UI Application
  </summary>
  <value></value>
  <returns></returns>
  <remarks></remarks>
 </member>
-<member name="M:Case.BasicReporting.Data.clsSettings.#ctor(Autodesk.Revit.UI.ExternalCommandData,Autodesk.Revit.DB.ElementSet)">
+<member name="P:Case.Subs.Renamer.Data.clsSettings.FamilyItems">
  <summary>
- Constructor
+ Family Types
+ </summary>
+ <value></value>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="P:Case.Subs.Renamer.Data.clsSettings.CategoryListing">
+ <summary>
+ Categories
+ </summary>
+ <value></value>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="P:Case.Subs.Renamer.Data.clsSettings.ExcelPath">
+ <summary>
+ Path to the Active Excel Document
+ </summary>
+ <value></value>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="P:Case.Subs.Renamer.Data.clsSettings.Version">
+ <summary>
+ Version of this Addin - Set in the Application Assembly Information
+ </summary>
+ <value></value>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="M:Case.Subs.Renamer.Data.clsSettings.#ctor(Autodesk.Revit.UI.ExternalCommandData)">
+ <summary>
+ The main memory management class
  </summary>
  <param name="c"></param>
- <param name="e"></param>
  <remarks></remarks>
 </member>
-<member name="M:Case.BasicReporting.Entry.CmdMain.Execute(Autodesk.Revit.UI.ExternalCommandData,System.String@,Autodesk.Revit.DB.ElementSet)">
+<member name="M:Case.Subs.Renamer.Data.clsSettings.Setup">
+ <summary>
+ Class Setup
+ </summary>
+ <remarks></remarks>
+</member>
+<member name="M:Case.Subs.Renamer.Data.clsSettings.ImportData(System.Data.DataTable)">
+ <summary>
+ Get Elements from Data
+ </summary>
+ <param name="dt">Datatable listing all elements to find and possibly rename</param>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="T:Case.Subs.Renamer.SortableBindingList`1">
+ <summary>
+ From http://www.timvw.be/presenting-the-sortablebindinglistt-take-two
+ Converted to VB and slightly modified for general use by Don Rudder
+ </summary>
+</member>
+<member name="T:Case.Subs.Renamer.PropertyComparer`1">
+ <summary>
+ From http://www.timvw.be/presenting-the-sortablebindinglistt-take-two
+ Converted to VB and slightly modified for general use by Don Rudder, HOK
+ </summary>
+</member>
+<member name="T:Case.Subs.Renamer.Entry.DD108DD4BDB24224BFB1848AEEA2582D">
+ <summary>
+ Revit 2023 Command Class
+ </summary>
+ <remarks></remarks>
+</member>
+<member name="M:Case.Subs.Renamer.Entry.DD108DD4BDB24224BFB1848AEEA2582D.Execute(Autodesk.Revit.UI.ExternalCommandData,System.String@,Autodesk.Revit.DB.ElementSet)">
  <summary>
  Command Entry Point
  </summary>
- <param name="commandData"></param>
- <param name="message"></param>
- <param name="elements"></param>
- <returns></returns>
- <remarks></remarks>
+ <param name="commandData">Input argument providing access to the Revit application and documents</param>
+ <param name="message">Return message to the user in case of error or cancel</param>
+ <param name="elements">Return argument to highlight elements on the graphics screen if Result is not Succeeded.</param>
+ <returns>Cancelled, Failed or Succeeded</returns>
 </member>
-<member name="P:Case.BasicReporting.form_Main.AllHostedElements">
+<member name="M:Case.Subs.Renamer.form_Families.#ctor(Case.Subs.Renamer.Data.clsSettings)">
  <summary>
- All Hosted Elements
- </summary>
- <value></value>
- <returns></returns>
- <remarks></remarks>
-</member>
-<member name="P:Case.BasicReporting.form_Main.AllFormulas">
- <summary>
- All Formulas
- </summary>
- <value></value>
- <returns></returns>
- <remarks></remarks>
-</member>
-<member name="M:Case.BasicReporting.form_Main.#ctor(Case.BasicReporting.Data.clsSettings)">
- <summary>
- Constructor
+ Family Renaming Form
  </summary>
  <param name="s"></param>
  <remarks></remarks>
 </member>
-<member name="M:Case.BasicReporting.form_Main.SetFormViz(Case.BasicReporting.form_Main.FormViz)">
+<member name="M:Case.Subs.Renamer.form_Rename.#ctor(Case.Subs.Renamer.Data.clsSettings)">
  <summary>
- Set the Form Visibility Basedon State
+ Rename Some Elements
  </summary>
- <param name="p_v"></param>
+ <param name="s">Setting Manager</param>
  <remarks></remarks>
 </member>
-<member name="M:Case.BasicReporting.form_Main.Report">
+<member name="M:Case.Subs.Renamer.form_Rename.Setup">
  <summary>
- Perform the reporting
- </summary>
- <remarks></remarks>
-</member>
-<member name="M:Case.BasicReporting.form_Main.GetAllFamilyFormulas">
- <summary>
- Return a List of Formulas
+ Form Class Setup
  </summary>
  <remarks></remarks>
 </member>
-<member name="M:Case.BasicReporting.form_Main.GetAllFamilyInstanceHosts">
+<member name="M:Case.Subs.Renamer.form_Rename.SetFormViz(Case.Subs.Renamer.form_Rename.formViz)">
  <summary>
- Get All Hosted Elements
+ Form Controls by Form State
  </summary>
+ <param name="fv"></param>
  <remarks></remarks>
 </member>
-<member name="M:Case.BasicReporting.form_Main.LevelHosting">
+<member name="M:Case.Subs.Renamer.form_Rename.UpdateTypesListing(System.Boolean)">
  <summary>
- Get all Level Inheritances
+ Update the Master Listing of Elements
  </summary>
+ <param name="isImport"></param>
  <remarks></remarks>
 </member>
-<member name="M:Case.BasicReporting.form_Main.WriteResultsToFile(System.String)">
+<member name="M:Case.Subs.Renamer.form_Rename.ButtonHelp_Click(System.Object,System.EventArgs)">
  <summary>
- Write Hosted Data to File
- </summary>
- <param name="fPath">File Path</param>
- <returns></returns>
- <remarks></remarks>
-</member>
-<member name="M:Case.BasicReporting.form_Main.AllowOk">
- <summary>
- 1 selection required minimum
- </summary>
- <remarks></remarks>
-</member>
-<member name="M:Case.BasicReporting.form_Main.ButtonHelp_Click(System.Object,System.EventArgs)">
- <summary>
- Help Button
+ Help
  </summary>
  <param name="sender"></param>
  <param name="e"></param>
  <remarks></remarks>
 </member>
-<member name="M:Case.BasicReporting.form_Main.PictureBox1_Click(System.Object,System.EventArgs)">
+<member name="M:Case.Subs.Renamer.form_Rename.ButtonSelectAll_Click(System.Object,System.EventArgs)">
  <summary>
- Launch Case Site on Logo Click
+ Select All Categories
  </summary>
  <param name="sender"></param>
  <param name="e"></param>
  <remarks></remarks>
 </member>
-<member name="M:Case.BasicReporting.form_Main.ButtonCancel_Click(System.Object,System.EventArgs)">
+<member name="M:Case.Subs.Renamer.form_Rename.ButtonSelectNone_Click(System.Object,System.EventArgs)">
+ <summary>
+ Select None Categories
+ </summary>
+ <param name="sender"></param>
+ <param name="e"></param>
+ <remarks></remarks>
+</member>
+<member name="M:Case.Subs.Renamer.form_Rename.DataGridViewCategories_CurrentCellDirtyStateChanged(System.Object,System.EventArgs)">
+ <summary>
+ Immediate Cell Click Update
+ </summary>
+ <param name="sender"></param>
+ <param name="e"></param>
+ <remarks></remarks>
+</member>
+<member name="M:Case.Subs.Renamer.form_Rename.ButtonRename_Click(System.Object,System.EventArgs)">
+ <summary>
+ Rename Stuff
+ </summary>
+ <param name="sender"></param>
+ <param name="e"></param>
+ <remarks></remarks>
+</member>
+<member name="M:Case.Subs.Renamer.form_Rename.ButtonExport_Click(System.Object,System.EventArgs)">
+ <summary>
+ Export Selected Information to Excel
+ </summary>
+ <param name="sender"></param>
+ <param name="e"></param>
+ <remarks></remarks>
+</member>
+<member name="M:Case.Subs.Renamer.form_Rename.ButtonImport_Click(System.Object,System.EventArgs)">
+ <summary>
+ Import Selected Information to Excel
+ </summary>
+ <param name="sender"></param>
+ <param name="e"></param>
+ <remarks></remarks>
+</member>
+<member name="M:Case.Subs.Renamer.form_Rename.ButtonCancel_Click(System.Object,System.EventArgs)">
  <summary>
  Cancel
- </summary>
- <param name="sender"></param>
- <param name="e"></param>
- <remarks></remarks>
-</member>
-<member name="M:Case.BasicReporting.form_Main.ButtonOk_Click(System.Object,System.EventArgs)">
- <summary>
- Commit
  </summary>
  <param name="sender"></param>
  <param name="e"></param>
